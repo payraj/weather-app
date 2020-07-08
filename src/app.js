@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+console.log('Testing git!')
 const app = express()
 
 app.set('view engine', 'hbs')
