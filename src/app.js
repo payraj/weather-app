@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast')
 
 console.log('Testing git!')
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs')
 app.use(express.static(path.join(__dirname, '../public')))
@@ -93,8 +94,8 @@ res.render('help' , {
          })      
     })          
 
-app.listen (3000, () => {
-    console.log('Server created!')
+app.listen (port, () => {
+    console.log('Server created on port' + port)
     
 })    
 

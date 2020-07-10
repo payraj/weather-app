@@ -2,7 +2,7 @@ console.log('client side javascript')
 
 document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault()
-    const url = 'http://localhost:3000/weather?address=' + document.querySelector('input').value
+    const url = '/weather?address=' + document.querySelector('input').value
     const p1 = document.querySelector('#error')
     const p2 = document.querySelector('#msg')
 
