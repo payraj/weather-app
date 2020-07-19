@@ -19,7 +19,7 @@ hbs.registerPartials(partialsPath)
  app.get( '', (req,res) => {
 // res.send('Home page')
 res.render('index' , {
-    title: 'Home hbs',
+    title: 'Weather App',
     name: 'Raja'
 })
  })
@@ -27,7 +27,7 @@ res.render('index' , {
  app.get( '/about', (req,res) => {
      //res.send('<h1>About page</h1>')
      res.render('about' , {
-        title: 'about hbs',
+        title: 'About Page',
         name: 'Raja'
     })
      })
@@ -36,7 +36,7 @@ app.get( '/weather', (req,res) => {
 
     if(!req.query.address) {
         return res.send({
-            error: 'Address yedi ra'
+            error: 'Please Enter Address'
            })
     }
     console.log(req.query)
@@ -64,7 +64,7 @@ app.get( '/weather', (req,res) => {
 app.get( '/products', (req,res) => {
     if(!req.query.search) {
         return res.send({
-            error: 'Search yedi ra'
+            error: 'Search yedi '
            })
     }
     console.log(req.query)
@@ -77,7 +77,7 @@ app.get( '/products', (req,res) => {
  app.get( '/help', (req,res) => {
 //     res.send('Help page')
 res.render('help' , {
-    title: 'help hbs',
+    title: 'Help page',
     name: 'Raja'
      })
     })

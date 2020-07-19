@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const p2 = document.querySelector('#msg')
 
     p1.textContent = 'Loading...'
-    p1.textContent = ''
+    p2.textContent = ''
 
 fetch(url).then((res) => {
     res.json().then((data) => {
@@ -15,7 +15,8 @@ fetch(url).then((res) => {
             p1.textContent = data.error
         } else {
             console.log(data)
-            p2.textContent = data.location + data.forecast.temperature
+            p2.textContent = 'Location : ' + data.location
+            p1.textContent = 'Temperature: ' + data.forecast.temperature
             }
     })
 })
